@@ -12,7 +12,7 @@ var turn=0
 var gameState;
 var PLAY=1;
 var END=0;
-var ground2;
+
 
 
 var particle 
@@ -28,8 +28,7 @@ function setup() {
 
 
 
-  ground2=new Ground(400,400,800,20);
-
+  
 
    for (var k = 0; k <=width; k = k + 80) {
      divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
@@ -74,7 +73,7 @@ function draw() {
   Engine.update(engine);
   ground.display();
   
- if(gameState===PLAY){
+ 
   if(particles.y > 400 ){
     if(particles.x < 300){
       score=500;
@@ -92,7 +91,7 @@ function draw() {
    
 
 
-   }
+   
 
 
 
